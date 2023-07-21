@@ -1,0 +1,14 @@
+- name: my docker playbook
+  hosts: 172.31.32.187
+  become: yes
+  tasks:
+    - name: docker installation
+      apt:
+        update_cache: yes
+        name: docker.io
+        state: present
+    - name: starting enabling docker
+      service:
+        name: docker
+        state: started
+        enabled: yes
