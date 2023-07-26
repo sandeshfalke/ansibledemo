@@ -1,5 +1,5 @@
 - name: my docker playbook
-  hosts: 172.31.32.187
+  hosts: webserver
   become: yes
   tasks:
     - name: docker installation
